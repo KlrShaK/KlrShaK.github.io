@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I have sucessfully defended my Bachelor\'s Thesis at Delhi Technological University! :sparkles: :smile:
+I have sucessfully defended my Bachelors Thesis at Delhi Technological University! :sparkles: :smile:
