@@ -18,8 +18,20 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I am an incoming Masters in Artificial Intelligence student at [University of Zurich](https://www.uzh.ch/en.html), Switzerland. I completed my Bachelors at Delhi Technological University (DTU), India in Engineering Physics. I defended my Bachelor Thesis titled "Elevating Semantics .. . " under the guidance of [Prof. Anil S. Parihar](https://scholar.google.com/citations?user=JRr4wjoAAAAJ) (Department of Computer Science, DTU). Though my extensive experiences I have developed my niche at the intersection of deep learning and robotics.
+I am an incoming Master's student in Artificial Intelligence at the [University of Zurich](https://www.uzh.ch/en.html), Switzerland. I completed my Bachelor's in Engineering Physics at Delhi Technological University (DTU), India. My Bachelor Thesis, titled *"Elevating Semantics: Fine-Grained Semantic Grounding for Enhanced Aerial Vision and Language Navigation"* was supervised by [Prof. Anil S. Parihar](https://scholar.google.com/citations?user=JRr4wjoAAAAJ) (Department of Computer Science, DTU).
 
-The objective of my research is to develop the science and engineering of autonomy and its applications to safe decision making for autonomous agents. My vision is a world with adaptive autonomous agents capable of learning to interact in complex, uncertain, and extreme scenarios, supporting people with cognitive and physical tasks. I have worked on learning end-to-end control (i.e., perception-to-actuation) of autonomous systems, formulating confidence of neural networks, mathematical modeling of human mobility, as well as building complex inertial refinement systems.
+My research focuses on the intersection of deep learning and robotics, particularly learning end-to-end control (i.e., perception-to-actuation) of autonomous systems, formulating confidence of neural networks, and mathematical modeling of human mobility. Most recently, I have been working on *Vision-Language Navigation* at the intersection of Computer Vision, Natural Language Processing, and Reinforcement Learning. This challenging task requires an embodied agent to follow linguistic directives and visual features to navigate unknown environments.
 
-As a researcher at heart, I have actively sought out opportunities to engage in research projects. I was awarded ThinkSwiss Research Scholarship 2023, which allowed me to collaborate with [Prof. Marcus Hudritsch](https://www.bfh.ch/en/about-bfh/people/5b7eblnby2di/) at Berner Fachhochschule. In the past, I have held the post of Team Manager and Autonomous System's Lead at Team Defianz Racing, one of the first driverless formula student teams in India, for 3 years.
+
+I have garnered various accolades throughout my journey, I was awarded the ThinkSwiss Research Scholarship 2023, which enabled me to collaborate with [Prof. Marcus Hudritsch](https://www.bfh.ch/en/about-bfh/people/5b7eblnby2di/) at Berner Fachhochschule. Additionally, I served as Team Manager and Autonomous Systems Lead for Team Defianz Racing, one of the first driverless formula student teams in India, for three years.
+
+---
+
+### Languages
+<div style="display: flex; margin-bottom: 30px; font-size: 18px;">
+    <div style="flex: 1; list-style-type: disc; padding-right: 20px;"> <b>English</b> - C1 (almost native)</div>
+    <div style="flex: 1; list-style-type: disc; padding-right: 20px;"> <b>Hindi</b> - Native</div>
+    <div style="flex: 1; list-style-type: disc;"> <b>Deutsch</b> - A1~A2 (Learning)</div>
+    <div style="flex: 1; list-style-type: disc;"> <b>Français</b> - A1 (Basic)</div>
+
+</div>
