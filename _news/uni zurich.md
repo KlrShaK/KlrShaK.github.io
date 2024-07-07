@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I will soon be starting Masters in AI at University of Zurich.
+I will soon be starting Masters in AI at University of Zurich. :mortar_board:
