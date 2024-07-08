@@ -1,0 +1,358 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\usepackage[left=3.0cm,right=3.0cm,top=3.0cm,bottom=3.0cm]{geometry}
+%----------FONT OPTIONS----------
+% % sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+% \definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+% \hypersetup{colorlinks,breaklinks,linkcolor=darkblue,urlcolor=darkblue,anchorcolor=darkblue,citecolor=darkblue}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{darkblue}{rgb}{0.0,0.0,0.4}
+\hypersetup{colorlinks,breaklinks,linkcolor=darkblue,urlcolor=darkblue,anchorcolor=darkblue,citecolor=darkblue}
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+\setlength{\footskip}{5pt}
+\begin{center}
+    {\Huge \scshape Shaurya Kishore Panwar} \\ \vspace{2pt}
+    Machine Learning and Robotics Researcher \\ \vspace{3pt}
+    \href{mailto:shauryak.panwar@outlook.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{shauryak.panwar@outlook.com}} ~ 
+    \href{https://linkedin.com/in/test/}{\raisebox{-0.2\height}\faLinkedin\ \underline{shaurya-k-panwar}}  ~
+    \href{https://github.com/test}{\raisebox{-0.2\height}\faGithub\ \underline{KlrShaK}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{http://dtu.ac.in/}{{Delhi Technological University}}}{Dec. 2020 -- Present}
+      {B.Tech. in Engineering Physics (Minors in Computer Science), \textbf{CGPA: 8.3/10}}{Delhi, India}
+    \resumeSubheading
+      {St. Xavier's Senior Sec. School}{Jan. 2018 -- Mar. 2020}
+      {Central Board of Secondary Education, Percentage: 89.4\%}{Rohini, Delhi, India}
+  \resumeSubHeadingListEnd
+
+%------RELEVANT COURSEWORK-------
+\section{Relevant Coursework}
+    % \resumeSubHeadingListStart
+        \begin{multicols}{3}
+            \begin{itemize}[itemsep=-5pt, parsep=3pt]
+                \item Deep Learning
+                \item Algorithms Design \& Analysis
+                \item Machine Learning
+                \item Instrumentation \& Control
+                \item Database Management System
+                % \item Discrete Structures
+                \item Object-Oriented Programming
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+    % \resumeSubHeadingListEnd
+
+% ----------------- Publications --------------------
+\section{Publications}
+\
+\resumeItemListStart
+    \vspace{-5pt}
+    % \resumeItem{Ashutosh Pandey, Harsh Raj, \textbf{Shaurya K. Panwar}, Kavinder Singh, Nihal Kumar, Anil S. Parihar    \textit{"Decoding Percepts in Vision Language Navigation: Is it about better features or more data?"} {Under Review (CVPR) }}
+    % \vspace{-4pt}
+    \resumeItem{\textbf{Shaurya K. Panwar}, Anil S. Parihar \textit{"Elevating Semantics: Fine-Grained Semantic Grounding for Enhanced Aerial Vision and Language Navigation"} Bachelor's Thesis at DTU}
+    
+% \resumeItem{Ashutosh Pandey, Harsh Raj, \textbf{ Shaurya K. Panwar}, Kavinder Singh, Nihal Kumar, Anil Singh Parihar    \textit{"Leveraging Visual-Language Pre-training for Vision and Language Navigation" Under Review 2023}}
+
+\resumeItemListEnd
+
+% % ----------------- ALTERNATIVEEEE --------------------
+% \section{Publications}
+% \
+% \resumeItemListStart
+%     \vspace{-5pt}
+%     \resumeItem{Ashutosh Pandey, Harsh Raj, \textbf{Shaurya K. Panwar}, Kavinder Singh, Nihal Kumar, Anil S. Parihar    \textit{"Decoding Percepts in Vision Language Navigation: Is it about better features or more data?"} {Under Review 2024 }}
+%     \vspace{-4pt}
+%     \resumeItem{Ashutosh Pandey, Harsh Raj, \textbf{Shaurya K. Panwar}, Kavinder Singh, Nihal Kumar, Anil S. Parihar    \textit{"NAVIGUE: Vision-Language Navigational Generalizations Using Pre-trained Vision-Language Models"} Under Review 2024}
+    
+% \resumeItem{Ashutosh Pandey, Harsh Raj, \textbf{ Shaurya K. Panwar}, Kavinder Singh, Nihal Kumar, Anil Singh Parihar    \textit{"Leveraging Visual-Language Pre-training for Vision and Language Navigation" Under Review 2023}}
+
+% \resumeItemListEnd
+
+
+\vspace{-13pt}
+
+% -----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+      \resumeSubheading
+      {\href{https://www.youtube.com/watch?v=EyqHZkrB38Q}{Visiting Researcher - Bern University of Applied Science}}{Jun. 2023 -- Aug. 2023}
+      {\href{https://www.bfh.ch/en/research/research-areas/cpvrlab/}{Advisor: Prof. Marcus Hudrich}}{Bern, Switzerland}
+
+      {Worked on {\href{https://drive.google.com/drive/folders/16mT-9xbNTa2VwfsxXxXko2sw1qJXU5Fp}{\textit{"No GPS Drone"}}} project to develop system for visual navigation, removing reliance on GPS. }
+      \vspace*{-2mm}
+      \resumeItemListStart
+        \resumeItem{Enhanced segmentation accuracy significantly from F1 score of 64.11 to 88.38. Redesigned ML network using transformer based decoder(UNetFormer). Expanded training dataset with augmentation and leveraged transfer learning techniques to optimize performance. While maintaining fast inference rate(67 FPS) on Jetson Orin Nano.}
+        % \resumeItem{Refactored and optimized the project's codebase, reducing system requirements and transforming it into a production-ready state, ensuring stability for deployment on Mobile Computing Platform(Jetson Nano).}
+        \resumeItem{Led the selection and integration of critical sensors, including cameras, altimeters, IMU, etc. Developed a synchronized data acquisition pipeline with data filtering and augmentation for seamless integration into the drone.}
+        
+    \resumeItemListEnd
+    \vspace{-10pt}
+       
+    \resumeSubheading
+      {\href{https://scholar.google.com/citations?user=JRr4wjoAAAAJ\&hl=en/}{Student Researcher - Delhi Technological University}}{Jan. 2022 -- Present}
+      {\href{https://scholar.google.com/citations?user=JRr4wjoAAAAJ\&hl=en/}{Advisor: Prof. Anil Singh Parihar}}{Delhi, India}
+      % \vspace*{-2mm}
+      \resumeItemListStart
+
+        \resumeItem{Interdisciplinary research in Computer Vision, Deep Learning and Natural Language Processing, specifically with applications in embodied navigation using Visio-linguistic data in unknown environments.}
+        \resumeItem{Authored a significant work in the field of Vision-Language Navigation(VLN),  \href{https://eval.ai/web/challenges/challenge-page/97/leaderboard/270}{\textbf{Ranking \#5 in VLN Leaderboard.}} (results under Team Name \textit{"MLR-Lab-DTU"})}
+        \resumeItem{Teaching Assistant on \textbf{CO302: Deep Learning}, Lectured "Hands On Sessions" on Attention, GANs, Transformers and multi-modal models.}
+        
+      \resumeItemListEnd
+      \vspace{2pt}
+   
+    \resumeSubheading
+      {\href{https://www.eulermotors.com/}{Autonomous Systems Intern - Euler Motors}}
+      {Jul. 2022 -- Aug. 2022}
+      {Advisors: Mr. Gaurav Taank}{Delhi, India}
+
+      
+      {Developed autonomous stack for autonomous delivery vehicle for large factories, capable of Level 3 driving (Improved and modified "AutoWare" an open-source platform )}
+      \vspace*{-2mm}
+      \resumeItemListStart
+        \resumeItem{ Carried out LiDAR-Camera fusion generating cost-effective 3D Semantic Maps, eliminating the need for expensive higher-density LiDAR. Allowing robust long range perception at a fraction of price.}
+        % \resumeItem{Done Literature-review of various graph-based SLAM algorithms for real-time mapping and localization. Selected modified RTAB-map for use with Velodyne VLP-16 because of faster inference time and better accuracy and localization capabilities at speed. Carried out generation of sparse-HD 3D map of the environment.}
+        \resumeItem{Made path detection algorithm robust to noise and error by creating filtering nodes(with Kalman filters, RANSAC, etc) for
+        Point-cloud data to remove outliers, down-sample for faster processing and ground plane removal.}
+      \resumeItemListEnd
+
+
+    
+  \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    % \vspace{1pt}
+    \resumeSubHeadingListStart   
+  
+    \resumeSubheading
+      {\href{https://drive.google.com/drive/folders/1jaOyK1fHZpHoX54Q8uiEvAYqxPnmLSqJ?usp=sharing}{Autonomous Systems Engineer - Team Defianz-DTUSDC } }
+      {Nov. 2020 -- Jul. 2023}
+      {Advisors: Prof. Anil S. Parihar \& Prof. Qasim Murtaza }{Delhi, India}
+      
+      
+      {Designing and Developing Autonomous Framework for Open-Wheeled Formula Student Driverless Race car, one of the first driverless team in India. Achieved 8th Position worldwide in FS Italy 2022}
+            
+      \resumeItemListStart
+       {\href{https://drive.google.com/drive/folders/1jaOyK1fHZpHoX54Q8uiEvAYqxPnmLSqJ?usp=sharing}{\textbf{Perception Subsystem} $|$ \emph{Python, TensorFlow, ROS, Darknet-YOLOv4}}}
+       \vspace{-2pt}
+        % \resumeItem{Implemented YOLO V4 after exhaustively literature review of existing object detection algorithms and its performance.}
+        \resumeItem{Built a CV pipeline capable of operating at high speed to accurately detect, localize and classify traffic cones. Starting from a small dataset (1000 images) with 3 categories, used image augmentation, transfer learning and custom synthetic dataset generation to improve accuracy by 20\%.}
+        % \resumeItem{Developed software for simultaneous extrinsic and intrinsic calibration of camera and LiDAR.}
+        \resumeItem{Developed system for high speed 3D object detection in pointclouds from LIDAR data using PointPillar technique.}
+
+
+        % \vspace{5pt}
+       {\textbf{Model-Based Planning Subsystem} $|$ \emph{Python, C++, Matplotlib, Numpy}}
+       \vspace{-2pt}
+        \resumeItem{Implemented a model-based planning algorithm BayesRace, using Bayesian Optimization to generate optimal Racing Line in just a few seconds, faster than traditional algorithms}
+        \resumeItem{After initial random sampling of trajectories, a Gaussian Process Model was trained and used Bayesian Optimization to iteratively search for fastest racing line}
+        % \resumeItem{Implemented a model-Based Planning algorithm BayesRace, using Bayesian Optimization to generate optimal Racing Line in just a few seconds, faster than traditional algorithms}
+
+       % \vspace{4pt}       {\href{https://drive.google.com/drive/folders/1YhOIC_EkKafmkKqkXDeokGFuyvxM03B5?usp=share_link}{\textbf{Software/Electronics Subsystem Testing and Architecture Analysis} $|$ \emph{Python, C++, Arduino, UnitTest}}}
+       % \vspace{-2pt}
+       %  \resumeItem{Carried out rigorous System Level and Autonomous (SIL and HIL) Testing to ensure system reliability}
+       %  \resumeItem{Presented and proposed implementation of ADAS system for Ather Energy’s electric 2-wheeler}   
+      \resumeItemListEnd
+
+      
+      % \vspace{50pt}
+      % \newpage
+      % \vspace{50pt}
+   \vspace{-13pt}
+      \resumeProjectHeading
+          {\textbf{Age-Invariant Face Recognition} $|$ \emph{Python, TensorFlow, TensorBoard, OpenCV}}{Sept. 2022}
+          \resumeItemListStart
+            \resumeItem{Built an Age-Invariant Face Recognition model using TensorFlow, trained on {\href{https://bcsiriuschen.github.io/CARC/}{CACD}}. A unified deep architecture performs cross-age face synthesis and recognition simultaneously, removes the requirement of paired data and label.}
+            \vspace{-11pt}
+            \resumeItem{Extended from auto-encoder based GAN, an Encoder and discriminator pair is used to learn discriminative and robust facial features disentangled from age.}
+            % \resumeItem{Patch-based discriminator with Attention, is used for photorealistic age regressed/progressed face images while guaranteeing robustness to large background complexity.}
+          \resumeItemListEnd 
+
+    \vspace{-13pt}
+      
+      \resumeProjectHeading {\href{https://youtu.be/U8uLd_OSrds?si=pycOz_iJBJtV2okE}{{\textbf {NXP Self Driving Car Model} $|$ \emph{Python, TensorFlow, ROS2, OpenCV}} } }{Aug. 2021}
+          \resumeItemListStart
+            \resumeItem{Developed a Deep-learning based framework for visual navigation using Imitation Learning in an urban environment laid with obstacles such as pedestrians, barricades and other cars. Deployed End-to-End CNN model with regularization technique with ROS2 in a simulated environment.}
+            \resumeItem{Significantly improved accuracy from a very small dataset of 1000 images for 5 categories, by creating custom dataset with image augmentation and data scraping; And smart pre-training of YOLOv4 Tiny.}
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+
+%-----------Achievement---------------
+\section{Achievements and Awards}
+    \resumeItemListStart
+    \setlength\itemsep{-0.2pt}
+       \resumeItem{\href{https://swissnex.org/india/thinkswiss/}{\textbf{ThinkSwiss Scholarship Awardee}} at Bern University of Applied Sciences, Switzerland.}
+       \resumeItem{\textbf{8th} in \href{https://www.formula-ata.it/results-2022/}{\textbf{FS Italy 2022}} Engineering Design Event}
+       \resumeItem{\textbf{3rd} in {\href{https://nxpaimindia.com/}{\textbf{NXP AIM India Smart Car Race Challenge}}} and Best Car Model Award from over 400 teams nationally}
+       \resumeItem{\textbf{2nd} in {\href{https://www.formulabharat.com/fsev/}{\textbf{Formula Bharat FSEV}}} Software and Integration Report.}
+       \resumeItem{Successfully Passed {\href{https://www.credential.net/385345b4-2736-4fb8-b647-11c777892adf\#gs.iud9s8}{\textbf{TensorFlow Developer Certification}}}. A 5-hour rigorous test, testing a candidate’s proficiency in solving Machine learning problems from various domains.}
+       \resumeItem{\textbf{Mr. Personality (Runner-Up)} in annual personality contest.}
+    \resumeItemListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \setlength\itemsep{5em} % Adjust the 1em value to increase or decrease spacing
+    \small{\item{
+        \textbf{Languages:}{ Python, C++, Java, Arduino, MATLAB/Octave, Bash Scripting, \LaTeX} \\
+      \vspace{3pt}
+         \textbf{Machine Learning/Data Analysis:}{ Deep Learning including CNNs, RNNs, VAEs, GANs, Transformers, NeRFs; Machine Learning including SVM, KNN, Decision Trees, Bayes } \\ 
+     \vspace{3pt}
+        \textbf{Framework and Libraries:}{ Linux, PyTorch, TensorFlow, OpenCV, SciKit-learn, ROS(Robot Operating System), ROS2, AutoWare, Gazebo, Pandas, Flask, HTML, Bootstrap, NumPy, Matplotlib, SQL} \\
+     \vspace{3pt}
+        \textbf{Tools:}{ Git, postgres SQL, Anaconda} \\
+    }}
+ \end{itemize}
+ % \vspace{-14pt}
+
+
+%-----------INVOLVEMENT---------------
+\section{Leadership / Extracurricular}
+    \resumeSubHeadingListStart
+        \resumeSubheading{Team Defianz-DTUSDC Racing}{Jan. 2022 -- Present}{Team Manager \& Autonomous System Lead}{Delhi Tech. University}
+            \resumeItemListStart
+                \resumeItem{Personally responsible for acquiring Title Sponsorships worth over \$5000 from a tech giant like NXP Semiconductors.}
+                \resumeItem{Supervised and managed over 40+ people in the team.}
+                \resumeItem{Responsible for the system integration of autonomous system into EV and  review of departmental progress}
+                \resumeItem{Served as one of the Electrical Systems Officers (ESO), certifying the vehicle and its High Voltage (HV) systems for safety, demonstrating expertise in electrical systems and compliance standards}
+                \resumeItem{Carried out recruitment process, managing 10+ new recruits, overlooking their training and turning them into an asset for the team in under 2 months}
+            \resumeItemListEnd
+
+
+        % \resumeSubheading{Desh ke Mentor Program}{Jan. 2022 -- Jun. 2022}{Mentee}{Govt. of NCT Delhi}
+        %     \resumeItemListStart
+        %         \resumeItem{Mentored 4 high-school students for 6 months, guiding them through the process of exploring their potential career choices and mentoring them with a plan of action and series of goals through their desired career path}
+        %     \resumeItemListEnd
+        
+    \resumeSubHeadingListEnd
+
+
+\end{document}

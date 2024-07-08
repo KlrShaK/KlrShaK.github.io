@@ -3,9 +3,9 @@ layout: cv
 permalink: /cv/
 title: CV
 nav: true
-nav_order: 5
-cv_pdf: example_pdf.pdf
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
+nav_order: 3
+cv_pdf: Shaurya_CV.pdf
+description: This is a brief overview of my work. Please use the download button for most accurate and up-to-date information about me and my work.  
 toc:
   sidebar: left
 ---

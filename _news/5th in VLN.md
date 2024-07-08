@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Our Team stands 3rd in global VLN Leaderboard
-date: 2015-11-07 16:11:00-0400
+title: Our Team Stands 3rd in Global VLN Leaderboard
+date: 2024-02-07 16:11:00-0400
 inline: false
 related_posts: false
 ---
