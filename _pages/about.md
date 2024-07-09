@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: "<a href='#'>Deep Learning & Robotics Researcher</a> | My Moto: \"Mens et Manus\""
+subtitle: "<a href='#'><b>Deep Learning & Robotics Researcher</b></a> | My Moto: \"Mens et Manus\""
 
 profile:
   align: right

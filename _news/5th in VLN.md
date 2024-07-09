@@ -1,33 +1,26 @@
 ---
 layout: post
-title: Our Team Stands 3rd in Global VLN Leaderboard
+title: Our Team Ranked <b>3rd* in Global VLN Leaderboard.</b>
 date: 2024-02-07 16:11:00-0400
 inline: false
 related_posts: false
 ---
 
-Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
+##### I'm am proud to announce that my work in Vision-Language Navigation(VLN) ranks at **3rd\* position** in [Global VLN leaderboard rankings](https://eval.ai/web/challenges/challenge-page/97/leaderboard/270)
 
 ---
 
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
+<div style="overflow: auto;">
+  <div style="float: left; width: 50%; margin-right: 20px; margin-bottom: 10px;">
+    {% include figure.liquid loading="eager" path="assets/img/leaderboard_vln.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+  </div>
 
-#### Hipster list
+  <p> * - Our Team at <i>Machine Learning Reasearch Laboratory (MLR-Lab)</i> at Delhi Technological University (DTU) which works on forefront of AI research, recently achieved yet another benchmark. We were able to score overall 6th in the leaderboard based on a variety of metrics [1]. However, some methods mentioned on the leaderboard such as Human benchmark, which is the performance of humans on the same task; pre-explored methods like AirBert and LILY, which pre-explore their environment to prepare a map and others on the leaderboard do not make sense with resepect to what we are trying to achieve and hence we have decided to exclude them and only count the relevant entries which followed the same rules of the task as we did. After following the above described process, we achieve an overall <b>3rd rank in Global VLN leaderboard.</b> </p>
 
-<ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
-</ul>
+  <p>Vision-Language Navigation is a rapidly growing in domain of Multi-modal learning, which requires expertise in multiple fields such as Computer Vision, Natural Language Processing and Reinforcement Learning. It requires an autonomous embodied agent to follow lingual directives combined with using availaible visual features of its environment to navigate sucessfully to its target in an unknown environment.</p>
 
-Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan.
+</div>
 
 ---
 
-Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.
-
-> We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
-> —Anais Nin
-
-Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.
+> [1] Anderson, Peter, Qi Wu, Damien Teney, Jake Bruce, Mark Johnson, Niko Sünderhauf, Ian Reid, Stephen Gould, and Anton Van Den Hengel. <b>"Vision-and-language navigation: Interpreting visually-grounded navigation instructions in real environments."</b> In Proceedings of the IEEE conference on computer vision and pattern recognition, pp. 3674-3683. 2018.
