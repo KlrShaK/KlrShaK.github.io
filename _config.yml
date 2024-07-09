@@ -13,7 +13,7 @@ footer_text: >
  | Hunting Bugs Since 2018 |
 keywords: shaurya, shaurya-k-panwar, panwar, engineer,deep-learning, researcher, AI, machine-learning, computer-vision, robotics, academic-website, portfolio-website # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: nn2.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://klrshak.github.io # the base hostname & protocol for your site
 baseurl: #/al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
