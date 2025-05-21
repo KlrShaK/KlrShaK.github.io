@@ -2,7 +2,7 @@
 layout: post
 title: Our Team Ranked <b>3rd* in Global VLN Leaderboard.</b>
 date: 2024-02-07 16:11:00-0400
-inline: true
+inline: false
 related_posts: false
 ---
 
