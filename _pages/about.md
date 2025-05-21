@@ -6,7 +6,7 @@ subtitle: "<a href='#'><b>Deep Learning & Robotics Researcher</b></a> | My Moto:
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: Shaurya_Portrait_formal.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>M.S. in Artificial Intelligence</p>
@@ -31,7 +31,7 @@ I have garnered various accolades throughout my journey. Most recently, [Google 
 <div style="display: flex; margin-bottom: 30px; font-size: 18px;">
     <div style="flex: 1; list-style-type: disc; padding-right: 20px;"> <b>English</b> - C1 (almost native)</div>
     <div style="flex: 1; list-style-type: disc; padding-right: 20px;"> <b>Hindi</b> - Native</div>
-    <div style="flex: 1; list-style-type: disc;"> <b>Deutsch</b> - A1~A2 (Learning)</div>
+    <div style="flex: 1; list-style-type: disc;"> <b>Deutsch</b> - A2-B1 (Learning)</div>
     <div style="flex: 1; list-style-type: disc;"> <b>Français</b> - A1 (Basic)</div>
 
 </div>
