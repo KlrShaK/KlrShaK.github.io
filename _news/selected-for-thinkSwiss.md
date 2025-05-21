@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I have been named **ThinkSwiss Research Scholarship Awardee 2023** by SERI and Embassy of Switzerland :switzerland: in India.
+Awarded **ThinkSwiss Research Scholarship 2023** by SERI and Embassy of Switzerland :switzerland: in India.

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I have been selected at OpenCV as [2025 Google Summer of Code (GSOC) Contributor](https://summerofcode.withgoogle.com/programs/2025/projects/IFR73yH5)
+Selected at OpenCV as [2025 Google Summer of Code (GSOC) Contributor](https://summerofcode.withgoogle.com/programs/2025/projects/IFR73yH5)
