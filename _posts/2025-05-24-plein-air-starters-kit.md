@@ -9,7 +9,7 @@ thumbnail: assets/img/art/1.jpg
 ---
 # A Beginner's guide to getting started with Plein-Air Painting
 
-Whether you dream of capturing sunrise over the lake or just want an excuse to spend more time outdoors, plein-air painting is a rewarding way to sharpen your eye and enjoy nature. Below you’ll find a **starter materials list** (split into **watercolor** and **acrylic** kits) followed by practical advice on setup, workflow, and staying comfortable outside.
+Love the outdoors? Got a creative soul? If you’re shouting “yes,” plein-air painting is calling—where your love for hiking and travel pairs perfectly with on-the-spot sketching and painting! Whether you dream of capturing sunrise over the lake or just want an excuse to spend more time outdoors, plein-air painting is a rewarding way to sharpen your eye and enjoy nature. Below you’ll find a **starter materials list** (split into **watercolor** and **acrylic** kits) followed by practical advice on setup, workflow, and staying comfortable outside.
 
 ---
 
