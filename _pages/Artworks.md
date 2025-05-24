@@ -2,64 +2,95 @@
 layout: page
 title: Artworks
 permalink: /artworks/
-description: A growing collection of your cool projects.
-nav: false
-nav_order: 0
-display_categories: [work, fun]
+description: A growing collection of my Art projects.
+nav: true
+nav_order: 6
+display_categories: [art, paintings, sketches]
 horizontal: false
 ---
+<!--  ❱❱  Artworks Gallery  ❰❰  -->
+<div class="container my-4">
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
+  <!-- Row 1 -->
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      {% include figure
+         image_path="assets/img/art/1.jpg"
+         caption="**Delhi Tech. Uni.** · Watercolor"
+         class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+
+    <div class="col-md-4 mb-4">
+      {% include figure
+         image_path="assets/img/art/2.jpg"
+         caption="**Untitled** · Oil on canvas"
+         class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+
+    <div class="col-md-4 mb-4">
+      {% include figure
+         image_path="assets/img/art/3.jpg"
+         caption="**Butterfly** · Watercolor"
+         class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
   </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
 
-{% else %}
+  <!-- Row 2 -->
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      {% include figure
+         image_path="assets/img/art/4.jpg"
+         caption="**Night of Jazz** · Oil on Canvas"
+         class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
 
-<!-- Display projects without categories -->
+    <div class="col-md-4 mb-4">
+      {% include figure
+         image_path="assets/img/art/5.jpg"
+         caption="**Portrait Study Benedict Cumberbach** · Acrylic on canvas"
+         class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
-
-  <!-- Generate cards for each project -->
-
-{% if page.horizontal %}
-
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
+    <div class="col-md-4 mb-4">
+      {% include figure
+         image_path="assets/img/art/6.jpg"
+         caption="**The eye** · Oil on Canvas"
+         class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
   </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
+
+  <!-- Row 3 -->
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      {% include figure
+         image_path="assets/img/art/7.jpg"
+         caption="**Alpine Study** · Oil on Canvas"
+         class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+
+    <div class="col-md-4 mb-4">
+      {% include figure
+         image_path="assets/img/art/8.jpg"
+         caption="**Mountains through the woods** · Oil on Canvas"
+         class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+
+    <div class="col-md-4 mb-4">
+      {% include figure
+         image_path="assets/img/art/9.jpg"
+         caption="**Albert Einstein - Portrait Study** · Dry Brushing, graphite on Paper"
+         class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
   </div>
-  {% endif %}
-{% endif %}
+
+  <!-- Row 4 -->
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      {% include figure
+         image_path="assets/img/art/10.jpg"
+         caption="**Emma Watson - Portrait Study** · Graphite on Paper"
+         class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
 </div>

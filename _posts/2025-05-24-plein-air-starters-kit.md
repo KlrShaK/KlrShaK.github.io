@@ -3,9 +3,9 @@ layout: post
 title: Starters Kit for Plein-Air Painting
 date: 2025-05-20 21:01:00
 description:  A Beginner's guide to getting started with Plein-Air Painting
-tags: art painting
+tags: art paintings
 categories: artwork
-thumbnail: assets/img/art/1.jpeg
+thumbnail: assets/img/art/1.jpg
 ---
 # A Beginner's guide to getting started with Plein-Air Painting
 
@@ -118,7 +118,7 @@ The joy of plein-air isn’t a perfect postcard on the first try—it’s notici
  
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/art/1.jpeg" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.liquid loading="eager" path="assets/img/art/1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/art/7.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
