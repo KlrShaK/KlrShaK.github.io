@@ -115,7 +115,7 @@ The joy of plein-air isn’t a perfect postcard on the first try—it’s notici
 
 **Happy painting—see you out there!**
 
-
+<!-- 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/art/7.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -126,7 +126,7 @@ The joy of plein-air isn’t a perfect postcard on the first try—it’s notici
 </div>
 <div class="caption">
     Some of my Plein-air paintings, just to show-off :wink: hahaha
-</div>
+</div> -->
 
 **Signing off...**
 
