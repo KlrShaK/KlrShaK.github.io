@@ -5,7 +5,7 @@ date: 2025-05-24 21:01:00
 description:  A Beginner's guide to getting started with Plein-Air Painting
 tags: art painting
 categories: artwork
-thumbnail: assets/img/art/1.jpg
+thumbnail: assets/img/intern_thumbnail.jpg
 ---
 # A Beginner's guide to getting started with Plein-Air Painting
 
