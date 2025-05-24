@@ -11,6 +11,4 @@ children:
   - title: Repositories
     permalink: /repositories/
   - title: divider
-  - title: Artworks
-    permalink: /artworks/
 ---
