@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Starters Kit for Plein-Air Painting
-date: 2025-05-24 21:01:00
+date: 2025-05-20 21:01:00
 description:  A Beginner's guide to getting started with Plein-Air Painting
 tags: art painting
 categories: artwork
-thumbnail: assets/img/intern_thumbnail.jpg
+thumbnail: assets/img/art/1.jpg
 ---
 # A Beginner's guide to getting started with Plein-Air Painting
 
@@ -114,8 +114,7 @@ Recommendations Winsor and Newton beginner's bundle: https://eu.winsornewton.com
 The joy of plein-air isn’t a perfect postcard on the first try—it’s noticing bird calls, shifting clouds, and light you’d miss indoors. Pack light, keep sessions short, and treat every field sketch as a learning snapshot. With each outing you’ll paint faster, see color more clearly, and feel right at home under the sky.
 
 **Happy painting—see you out there!**
-
-<!-- 
+ 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/art/7.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -126,7 +125,7 @@ The joy of plein-air isn’t a perfect postcard on the first try—it’s notici
 </div>
 <div class="caption">
     Some of my Plein-air paintings, just to show-off :wink: hahaha
-</div> -->
+</div>
 
 **Signing off...**
 
