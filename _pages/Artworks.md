@@ -19,10 +19,7 @@ horizontal: false
          caption="<strong>Untitled</strong> · Oil on Copper"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
-  </div>
 
-  <!-- Row 2 -->
-  <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
          path="assets/img/art/1.jpg"
@@ -36,17 +33,17 @@ horizontal: false
          caption="<strong>Untitled</strong> · Oil on canvas"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
+  </div>
 
+  <!-- Row 2 -->
+  <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
          path="assets/img/art/3.jpg"
          caption="<strong>Butterfly</strong> · Watercolor"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
-  </div>
 
-  <!-- Row 3 -->
-  <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
          path="assets/img/art/4.jpg"
@@ -60,17 +57,17 @@ horizontal: false
          caption="<strong>Portrait Study Benedict Cumberbach</strong> · Acrylic on canvas"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
+  </div>
 
+  <!-- Row 3 -->
+  <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
          path="assets/img/art/6.jpg"
          caption="<strong>The eye</strong> · Oil on Canvas"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
-  </div>
 
-  <!-- Row 4 -->
-  <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
          path="assets/img/art/7.jpg"
@@ -84,17 +81,17 @@ horizontal: false
          caption="<strong>Mountains through the woods</strong> · Oil on Canvas"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
+  </div>
 
+  <!-- Row 4 -->
+  <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
          path="assets/img/art/9.jpg"
          caption="<strong>Albert Einstein - Portrait Study</strong> · Dry Brushing, graphite on Paper"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
-  </div>
 
-  <!-- Row 5 -->
-  <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
          path="assets/img/art/10.jpg"
