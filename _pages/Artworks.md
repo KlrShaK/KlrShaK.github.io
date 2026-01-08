@@ -15,6 +15,16 @@ horizontal: false
   <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
+         path="assets/img/art/untitled_oil_on_copper_2022.jpg"
+         caption="<strong>Untitled</strong> · Oil on Copper"
+         class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      {% include figure.liquid
          path="assets/img/art/1.jpg"
          caption="<strong>Delhi Tech. Uni.</strong> · Watercolor"
          class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -35,7 +45,7 @@ horizontal: false
     </div>
   </div>
 
-  <!-- Row 2 -->
+  <!-- Row 3 -->
   <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
@@ -59,7 +69,7 @@ horizontal: false
     </div>
   </div>
 
-  <!-- Row 3 -->
+  <!-- Row 4 -->
   <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
@@ -83,7 +93,7 @@ horizontal: false
     </div>
   </div>
 
-  <!-- Row 4 -->
+  <!-- Row 5 -->
   <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
