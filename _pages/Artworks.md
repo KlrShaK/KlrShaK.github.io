@@ -29,8 +29,8 @@ horizontal: false
 
     <div class="col-md-4 mb-4">
       {% include figure.liquid
-         path="assets/img/art/2.jpg"
-         caption="<strong>Untitled</strong> · Oil on canvas"
+         path="assets/img/art/4.jpg"
+         caption="<strong>Night of Jazz</strong> · Oil on Canvas"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
   </div>
@@ -46,8 +46,8 @@ horizontal: false
 
     <div class="col-md-4 mb-4">
       {% include figure.liquid
-         path="assets/img/art/4.jpg"
-         caption="<strong>Night of Jazz</strong> · Oil on Canvas"
+         path="assets/img/art/2.jpg"
+         caption="<strong>Untitled</strong> · Oil on canvas"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 
