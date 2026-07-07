@@ -11,8 +11,16 @@ horizontal: false
 <!--  ❱❱  Artworks Gallery  ❰❰  -->
 <div class="container my-4">
 
+  <!-- Add new artworks at the top so the gallery stays reverse chronological. -->
   <!-- Row 1 -->
   <div class="row">
+    <div class="col-md-4 mb-4">
+      {% include figure.liquid
+         path="assets/img/art/helen_of_athina.jpg"
+         caption="<strong>Helen of Athina</strong> · Oil on Canvas"
+         class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+
     <div class="col-md-4 mb-4">
       {% include figure.liquid
          path="assets/img/art/untitled_oil_on_copper_2022.jpg"
