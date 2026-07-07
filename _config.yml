@@ -309,8 +309,8 @@ display_categories: ["sample-posts"] # these categories will be displayed on the
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Panwar]
+  first_name: [Shaurya, S., Shaurya K., Shaurya Kishore]
 
   style: apa
   locale: en
