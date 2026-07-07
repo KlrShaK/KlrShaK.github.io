@@ -11,12 +11,12 @@ horizontal: false
 <!--  ❱❱  Artworks Gallery  ❰❰  -->
 <div class="container my-4">
 
-  <!-- Add new artworks at the top so the gallery stays reverse chronological. -->
+  <!-- Add new artworks at the top so the gallery stays reverse chronological. Keep full rows to three cards. -->
   <!-- Row 1 -->
   <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
-         path="assets/img/art/helen_of_athina.jpg"
+         path="assets/img/art/helen_of_athina_crop.jpg"
          caption="<strong>Helen of Athina</strong> · Oil on Canvas"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
@@ -34,17 +34,17 @@ horizontal: false
          caption="<strong>Delhi Tech. Uni.</strong> · Watercolor"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
+  </div>
 
+  <!-- Row 2 -->
+  <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
          path="assets/img/art/4.jpg"
          caption="<strong>Night of Jazz</strong> · Oil on Canvas"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
-  </div>
 
-  <!-- Row 2 -->
-  <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
          path="assets/img/art/3.jpg"
@@ -58,17 +58,17 @@ horizontal: false
          caption="<strong>Untitled</strong> · Oil on canvas"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
+  </div>
 
+  <!-- Row 3 -->
+  <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
          path="assets/img/art/5.jpg"
          caption="<strong>Portrait Study Benedict Cumberbach</strong> · Acrylic on canvas"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
-  </div>
 
-  <!-- Row 3 -->
-  <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
          path="assets/img/art/6.jpg"
@@ -82,17 +82,17 @@ horizontal: false
          caption="<strong>Alpine Study</strong> · Oil on Canvas"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
+  </div>
 
+  <!-- Row 4 -->
+  <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
          path="assets/img/art/8.jpg"
          caption="<strong>Mountains through the woods</strong> · Oil on Canvas"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
-  </div>
 
-  <!-- Row 4 -->
-  <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
          path="assets/img/art/9.jpg"
@@ -106,7 +106,10 @@ horizontal: false
          caption="<strong>Emma Watson - Portrait Study</strong> · Graphite on Paper"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
+  </div>
 
+  <!-- Row 5 -->
+  <div class="row">
     <div class="col-md-4 mb-4">
       {% include figure.liquid
          path="assets/img/art/portrait_study_dry_brush_graphite.jpg"
