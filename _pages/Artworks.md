@@ -106,6 +106,13 @@ horizontal: false
          caption="<strong>Emma Watson - Portrait Study</strong> · Graphite on Paper"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
+
+    <div class="col-md-4 mb-4">
+      {% include figure.liquid
+         path="assets/img/art/portrait_study_dry_brush_graphite.jpg"
+         caption="<strong>Portrait Study</strong> · Dry Brushing, graphite on Paper"
+         class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
   </div>
 
 </div>
