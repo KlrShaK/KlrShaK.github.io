@@ -1,0 +1,14 @@
+{% assign item = include.item %}
+{% if item.url %}
+  <a class="recognition-card" href="{{ item.url }}">
+    <span>{{ item.year }}</span>
+    <strong>{{ item.title }}</strong>
+    <small>{{ item.context }}</small>
+  </a>
+{% else %}
+  <div class="recognition-card">
+    <span>{{ item.year }}</span>
+    <strong>{{ item.title }}</strong>
+    <small>{{ item.context }}</small>
+  </div>
+{% endif %}

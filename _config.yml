@@ -193,7 +193,7 @@ collections:
     permalink: /news/:path/
   projects:
     output: true
-    permalink: /projects/:path/
+    permalink: /portfolio/:path/
 
 announcements:
   enabled: true

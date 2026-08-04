@@ -1,0 +1,30 @@
+{% assign item = include.item %}
+<article
+  class="portfolio-card portfolio-card-{{ include.variant }} portfolio-filterable{% unless item.media %} portfolio-card-no-media{% endunless %}"
+  data-categories="{{ item.categories | join: ' ' }}"
+>
+  {% if item.media %}
+    <div class="portfolio-card-media">
+      {% include portfolio/media.liquid media=item.media title=item.title %}
+    </div>
+  {% endif %}
+  <div class="portfolio-card-copy">
+    <div class="portfolio-card-meta">
+      <span>{{ item.period }}</span>
+      {% if item.role -%}
+        <span>{{ item.role }}</span>
+      {%- endif %}
+    </div>
+    <p class="portfolio-eyebrow">{{ item.context }}</p>
+    <h3>{{ item.title }}</h3>
+    <p>{{ item.summary }}</p>
+    {% if item.technologies %}
+      <ul class="portfolio-tech" aria-label="Technologies">
+        {% for technology in item.technologies limit: 5 %}
+          <li>{{ technology }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% include portfolio/actions.liquid links=item.links detail_url=item.detail_url %}
+  </div>
+</article>

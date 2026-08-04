@@ -1,0 +1,15 @@
+{% if detail_url or links.size > 0 %}
+  <div class="portfolio-actions{% if compact %} portfolio-actions-compact{% endif %}">
+    {% if detail_url %}
+      <a class="portfolio-action portfolio-action-primary" href="{{ detail_url | relative_url }}">
+        Explore <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    {% endif %}
+    {% for link in links %}
+      <a class="portfolio-action" href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}">
+        {% if link.icon %}<i class="{{ link.icon }}" aria-hidden="true"></i>{% endif %}
+        {{ link.label }}
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}

@@ -1,0 +1,29 @@
+{% assign media = include.media %}
+{% if media %}
+  <div class="portfolio-media">
+    {% if media.play_url %}<a href="{{ media.play_url }}" aria-label="Play {{ include.title }} demo">{% endif %}
+    {% if media.type == 'video' %}
+      <video
+        class="portfolio-video"
+        muted
+        loop
+        playsinline
+        preload="none"
+        poster="{{ media.poster | relative_url }}"
+        aria-label="{{ media.alt }}"
+      >
+        <source data-src="{{ media.src | relative_url }}" type="video/mp4">
+      </video>
+      <button class="portfolio-video-toggle" type="button" aria-label="Pause video preview">
+        <i class="fa-solid fa-pause" aria-hidden="true"></i>
+      </button>
+      <span class="portfolio-motion-label"><i class="fa-solid fa-circle-play" aria-hidden="true"></i> Live preview</span>
+    {% else %}
+      <img src="{{ media.src | relative_url }}" alt="{{ media.alt }}" loading="lazy">
+      {% if media.play_url -%}
+        <span class="portfolio-play"><i class="fa-solid fa-play" aria-hidden="true"></i><span class="sr-only">Play demo</span></span>
+      {%- endif %}
+    {% endif %}
+    {% if media.play_url %}</a>{% endif %}
+  </div>
+{% endif %}

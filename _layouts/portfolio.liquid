@@ -1,0 +1,36 @@
+---
+layout: default
+---
+{% assign item = site.data.portfolio | where: 'slug', page.portfolio_slug | first %}
+<article class="portfolio-detail">
+  <a class="portfolio-back" href="{{ '/portfolio/' | relative_url }}"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All work</a>
+  <header class="portfolio-detail-header">
+    <p class="portfolio-kicker">{{ item.context }} · {{ item.period }}</p>
+    <h1>{{ item.title }}</h1>
+    <p class="portfolio-detail-lede">{{ item.summary }}</p>
+    {% include portfolio/actions.liquid links=item.links %}
+  </header>
+  {% if item.media %}
+    <div class="portfolio-detail-media">
+      {% include portfolio/media.liquid media=item.media title=item.title %}
+    </div>
+  {% endif %}
+  <div class="portfolio-detail-body">
+    <aside class="portfolio-detail-aside">
+      {% if item.role %}
+        <div>
+          <span>Role</span><strong>{{ item.role }}</strong>
+        </div>
+      {% endif %}
+      <div>
+        <span>Focus</span><strong>{{ item.categories | join: ' · ' | replace: '-', ' ' }}</strong>
+      </div>
+      <ul class="portfolio-tech" aria-label="Technologies">
+        {% for technology in item.technologies %}
+          <li>{{ technology }}</li>
+        {% endfor %}
+      </ul>
+    </aside>
+    <div class="portfolio-detail-story">{{ content }}</div>
+  </div>
+</article>

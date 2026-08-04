@@ -1,0 +1,320 @@
+- slug: langloc
+  title: "LangLoc: Tell Me What You See"
+  period: "Jul. 2025 — Feb. 2026"
+  context: "ETH Zürich · University of Zürich · ECCV 2026"
+  summary: "Fine-grained indoor localization from language alone: retrieve a 3D scene, infer position and heading, then resolve ambiguity through a Bayesian dialog."
+  role: "Researcher · equal contribution"
+  categories: [research, embodied-ai, computer-vision]
+  featured: true
+  timeline: true
+  timeline_order: 2
+  detail_url: /portfolio/langloc/
+  media:
+    type: image
+    src: assets/portfolio/langloc/overview.jpg
+    alt: "LangLoc pipeline grounding a natural-language description in a reconstructed indoor scene"
+  technologies: [PyTorch, GATv2, CLIP, Open3D, 3D scene graphs]
+  links:
+    - label: Project
+      url: https://rzninvo.github.io/Lang-Loc/
+      icon: fa-solid fa-arrow-up-right-from-square
+    - label: Paper
+      url: https://arxiv.org/abs/2607.05077
+      icon: ai ai-arxiv
+    - label: Code
+      url: https://github.com/rzninvo/Lang-Loc
+      icon: fa-brands fa-github
+
+- slug: simple-slam
+  title: "Visual SLAM from Scratch"
+  period: "May — Sept. 2025"
+  context: "Google Summer of Code · OpenCV"
+  summary: "An educational monocular SLAM framework with learned ALIKED + LightGlue features, map tracking, bundle adjustment, loop closure, and live 3D visualization."
+  role: "GSoC contributor"
+  categories: [robotics, computer-vision, software]
+  featured: true
+  timeline: true
+  timeline_order: 3
+  detail_url: /portfolio/simple-slam/
+  media:
+    type: video
+    src: assets/portfolio/simple-slam/preview.mp4
+    poster: assets/portfolio/simple-slam/poster.jpg
+    alt: "SLAM visualization showing camera tracking, feature matches, trajectory, and a sparse 3D map"
+  technologies: [Python, OpenCV, ALIKED, LightGlue, PyCeres, Open3D]
+  links:
+    - label: Code
+      url: https://github.com/KlrShaK/opencv-SimpleSLAM
+      icon: fa-brands fa-github
+    - label: GSoC
+      url: https://summerofcode.withgoogle.com/programs/2025/projects/IFR73yH5
+      icon: fa-solid fa-award
+
+- slug: smart-glasses
+  title: "Conversational Navigation for Smart Glasses"
+  period: "Aug. 2025 — Jan. 2026"
+  context: "Microsoft Research · ETH Zürich"
+  summary: "A mixed-reality system that localizes a user from one photo, plans through large buildings, and gives concise directions grounded in visible landmarks."
+  role: "Mixed Reality project"
+  categories: [embodied-ai, computer-vision, software]
+  featured: true
+  detail_url: /portfolio/smart-glasses/
+  media:
+    type: video
+    src: assets/portfolio/smart-glasses/preview.mp4
+    poster: assets/portfolio/smart-glasses/poster.jpg
+    alt: "Mobile interface and reconstructed building used for landmark-based indoor navigation"
+  technologies: [hloc, COLMAP, Habitat-Sim, PyTorch, LoRA, Open3D]
+  links:
+    - label: Demo
+      url: https://youtu.be/N-JltTWf0Vw
+      icon: fa-brands fa-youtube
+    - label: Code
+      url: https://github.com/KlrShaK/Conversational_Navigation_for_Smart_Glasses
+      icon: fa-brands fa-github
+    - label: Poster
+      url: https://drive.google.com/file/d/1HJd8EX6o1TLpYBQCigks_ZbWDJrIcFaG/view?usp=drive_link
+      icon: fa-regular fa-image
+    - label: Report
+      url: https://drive.google.com/file/d/1n1Nx1rwxgw72PEZq9z-ERaWggY-4oeSW/view?usp=sharing
+      icon: fa-regular fa-file-lines
+
+- slug: rl-drone
+  title: "Deep-RL Vision-Based Drone Control"
+  period: "Sept. 2025"
+  context: "University of Zürich · Robotics and Perception Group"
+  summary: "A PPO controller for vision-based target following under partial observability, transferred from simulation to a real drone with stable altitude and stand-off control."
+  role: "Autonomous systems project"
+  categories: [robotics, embodied-ai, computer-vision]
+  featured: true
+  detail_url: /portfolio/rl-drone/
+  media:
+    type: image
+    src: assets/portfolio/rl-drone/poster.jpg
+    alt: "Real-world drone target-following demonstration"
+    play_url: https://www.youtube.com/watch?v=H1y3LKRlMYc
+  technologies: [PPO, Python, C++, TensorFlow, ROS2, OpenCV]
+  links:
+    - label: Demo
+      url: https://www.youtube.com/watch?v=H1y3LKRlMYc
+      icon: fa-brands fa-youtube
+    - label: Report
+      url: https://drive.google.com/file/d/1pYvOz1_lOxPkm4MyaeNI5i7avQKixSJU/view?usp=sharing
+      icon: fa-regular fa-file-lines
+
+- slug: cloth-folding
+  title: "Vision-Language-Action Cloth Folding"
+  period: "Jun. 2026"
+  context: "ETH Zürich · Robot Learning"
+  summary: "An end-to-end SmolVLA pipeline for an SO-101 arm: dual-camera teleoperation, LeRobot demonstrations, fine-tuning, and real-world cloth-folding rollouts."
+  role: "Robot Learning final project"
+  categories: [robotics, embodied-ai, research]
+  featured: true
+  detail_url: /portfolio/cloth-folding/
+  media:
+    type: video
+    src: assets/portfolio/cloth-folding/preview.mp4
+    poster: assets/portfolio/cloth-folding/poster.jpg
+    alt: "SO-101 robot arm autonomously folding a blue cloth"
+  technologies: [SmolVLA, LeRobot, PyTorch, SO-101, WebRTC]
+  links:
+    - label: Code
+      url: https://github.com/KlrShaK/robo_arm_cloth_folding
+      icon: fa-brands fa-github
+    - label: Dataset
+      url: https://huggingface.co/datasets/klrshak/cloth_folding_two_cam
+      icon: fa-solid fa-database
+    - label: Policy
+      url: https://huggingface.co/klrshak/smolvla_HQ_two_cam
+      icon: fa-solid fa-cube
+
+- slug: actuator-iq
+  title: "ActuatorIQ"
+  period: "Mar. 2026"
+  context: "START Hack · Belimo Challenge · Runner-up"
+  summary: "An AI-powered HVAC diagnostics and building-safety platform combining live actuator telemetry, blockage recovery, anomaly detection, and a 3D digital twin."
+  role: "Calibration, recovery, and live telemetry"
+  categories: [software, robotics, embodied-ai]
+  featured: true
+  detail_url: /portfolio/actuator-iq/
+  media:
+    type: video
+    src: assets/portfolio/actuator-iq/preview.mp4
+    poster: assets/portfolio/actuator-iq/poster.jpg
+    alt: "ActuatorIQ interface showing an interactive building digital twin and HVAC diagnostics"
+  technologies: [React, TypeScript, Three.js, Python, InfluxDB, Raspberry Pi]
+  links:
+    - label: Demo
+      url: https://youtu.be/_fuZAq_C73o
+      icon: fa-brands fa-youtube
+    - label: Code
+      url: https://github.com/KlrShaK/Belimo-ActuatorIQ
+      icon: fa-brands fa-github
+
+- slug: no-gps-drone
+  title: "No-GPS Drone Navigation"
+  period: "Jun. — Aug. 2023"
+  context: "ThinkSwiss · Bern University of Applied Sciences"
+  summary: "Vision-based drone navigation for GPS-denied environments, including a redesigned segmentation network and a synchronized onboard sensor pipeline."
+  role: "Visiting researcher"
+  categories: [robotics, computer-vision, research]
+  featured: true
+  timeline: true
+  timeline_order: 6
+  detail_url: /portfolio/no-gps-drone/
+  media:
+    type: image
+    src: assets/portfolio/no-gps-drone/poster.jpg
+    alt: "Drone used during the No-GPS navigation research project in Switzerland"
+    play_url: https://www.youtube.com/watch?v=EyqHZkrB38Q
+  technologies: [UNetFormer, PyTorch, Jetson Orin Nano, sensors, data acquisition]
+  links:
+    - label: Demo
+      url: https://www.youtube.com/watch?v=EyqHZkrB38Q
+      icon: fa-brands fa-youtube
+    - label: Blog
+      url: /blog/2023/summer-23-intern/
+      icon: fa-solid fa-book-open
+    - label: Media
+      url: https://drive.google.com/drive/folders/16mT-9xbNTa2VwfsxXxXko2sw1qJXU5Fp
+      icon: fa-regular fa-images
+
+- slug: defianz
+  title: "Team Defianz Driverless Racing"
+  period: "Nov. 2020 — Jul. 2024"
+  context: "Delhi Technological University · Formula Student"
+  summary: "Three years building and leading autonomous systems for an open-wheel race car: perception, LiDAR detection, planning, testing, safety, sponsorship, and a 40+ member team."
+  role: "Team Manager · Autonomous Systems Lead"
+  categories: [robotics, computer-vision, leadership]
+  featured: true
+  timeline: true
+  timeline_order: 5
+  detail_url: /portfolio/defianz/
+  technologies: [ROS, PyTorch, YOLO, PointPillars, Gazebo, BayesRace]
+  links:
+    - label: Media
+      url: https://drive.google.com/drive/folders/1jaOyK1fHZpHoX54Q8uiEvAYqxPnmLSqJ?usp=sharing
+      icon: fa-regular fa-images
+    - label: BayesRace
+      url: https://github.com/KlrShaK/bayesrace
+      icon: fa-brands fa-github
+    - label: FS Italy
+      url: https://www.formula-ata.it/results-2022/
+      icon: fa-solid fa-trophy
+
+- slug: bachelor-thesis
+  title: "Elevating Semantics"
+  period: "2024"
+  context: "Bachelor’s thesis · Delhi Technological University"
+  summary: "Fine-grained semantic grounding for aerial vision-and-language navigation, connecting visual-language pre-training with embodied navigation."
+  categories: [research, embodied-ai, computer-vision]
+  supporting: true
+  links:
+    - label: Thesis
+      url: https://drive.google.com/file/d/1s0EknvvwHLOO8p6iLvjM1gyjZpthandd/view?usp=drive_link
+      icon: fa-regular fa-file-lines
+
+- slug: dtu-vln
+  title: "Vision-Language Navigation Research"
+  period: "Jan. 2022 — Aug. 2024"
+  context: "Machine Learning Research Lab · DTU"
+  summary: "Research at the intersection of computer vision, deep reinforcement learning, and language, culminating in a top-five global VLN leaderboard result."
+  categories: [research, embodied-ai, computer-vision]
+  timeline: true
+  timeline_order: 4
+  supporting: true
+  media:
+    type: image
+    src: assets/img/leaderboard_vln.png
+    alt: "Vision-and-Language Navigation leaderboard showing the DTU team result"
+  links:
+    - label: Leaderboard
+      url: https://eval.ai/web/challenges/challenge-page/97/leaderboard/270
+      icon: fa-solid fa-ranking-star
+
+- slug: decoding-percepts
+  title: "Decoding Percepts in Vision-Language Navigation"
+  period: "2024"
+  context: "Research manuscript"
+  summary: "An investigation into whether VLN gains come from stronger visual features or simply more training data."
+  categories: [research, embodied-ai, computer-vision]
+  supporting: true
+
+- slug: navigue
+  title: "NAVIGUE"
+  period: "2024"
+  context: "Research manuscript"
+  summary: "Vision-language navigational generalization using pretrained vision-language models."
+  categories: [research, embodied-ai, computer-vision]
+  supporting: true
+
+- slug: visual-language-pretraining
+  title: "Leveraging Visual-Language Pre-training for VLN"
+  period: "2023"
+  context: "Research manuscript"
+  summary: "Early research on transferring pretrained multimodal representations into embodied navigation."
+  categories: [research, embodied-ai, computer-vision]
+  supporting: true
+
+- slug: euler-motors
+  title: "Autonomous Delivery Vehicles"
+  period: "Jul. — Aug. 2022"
+  context: "Euler Motors · Autonomous Systems Intern"
+  summary: "Extended an Autoware-based stack for Level 3 autonomous delivery vehicles operating in large factory environments."
+  categories: [robotics, software, computer-vision]
+  timeline: true
+  timeline_order: 7
+  supporting: true
+  links:
+    - label: Euler Motors
+      url: https://www.eulermotors.com/
+      icon: fa-solid fa-arrow-up-right-from-square
+
+- slug: age-invariant-face-recognition
+  title: "Age-Invariant Face Recognition"
+  period: "Sept. 2022"
+  context: "Deep learning project"
+  summary: "A unified GAN-based architecture for cross-age face synthesis and recognition, trained on CACD without requiring paired examples."
+  categories: [research, computer-vision]
+  supporting: true
+  links:
+    - label: Dataset
+      url: https://bcsiriuschen.github.io/CARC/
+      icon: fa-solid fa-database
+
+- slug: nxp-smart-car
+  title: "NXP Self-Driving Car"
+  period: "Aug. 2021"
+  context: "NXP AIM India · 3rd nationally · Best Car Model"
+  summary: "An imitation-learning navigation stack with ROS2, a compact CNN, and YOLOv4-Tiny trained from a small custom-augmented dataset."
+  categories: [robotics, computer-vision, embodied-ai]
+  supporting: true
+  media:
+    type: image
+    src: assets/portfolio/nxp-car/poster.jpg
+    alt: "NXP autonomous smart-car demonstration"
+    play_url: https://youtu.be/U8uLd_OSrds?si=pycOz_iJBJtV2okE
+  links:
+    - label: Demo
+      url: https://youtu.be/U8uLd_OSrds?si=pycOz_iJBJtV2okE
+      icon: fa-brands fa-youtube
+
+- slug: monkee
+  title: "Bimanual Climbing Robot"
+  period: "Nov. 2025 — Present"
+  context: "ETH Robotics Club · Team MONKEE"
+  summary: "Leading a 10+ person software team building sensing, simulation, teleoperation, and climbing control for a bimanual robot."
+  categories: [robotics, software, leadership]
+  timeline: true
+  timeline_order: 1
+  supporting: true
+
+- slug: desh-ke-mentor
+  title: "Desh Ke Mentor"
+  period: "Jan. — Jun. 2022"
+  context: "Government of NCT Delhi"
+  summary: "Mentored four high-school students through career exploration and concrete six-month action plans."
+  categories: [leadership]
+  timeline: true
+  timeline_order: 8
+  supporting: true
