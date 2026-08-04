@@ -1,8 +1,20 @@
 {% assign media = include.media %}
 {% if media %}
   <div class="portfolio-media">
-    {% if media.play_url %}<a href="{{ media.play_url }}" aria-label="Play {{ include.title }} demo">{% endif %}
-    {% if media.type == 'video' %}
+    {% if media.type == 'youtube' %}
+      <div
+        class="portfolio-youtube"
+        data-youtube-id="{{ media.youtube_id }}"
+        data-youtube-title="{{ include.title | escape }}"
+      >
+        <img class="portfolio-youtube-poster" src="{{ media.poster | relative_url }}" alt="{{ media.alt }}" loading="lazy">
+        <button class="portfolio-youtube-load" type="button" aria-label="Play {{ include.title }} video">
+          <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+          <span>Play video</span>
+        </button>
+        <span class="portfolio-motion-label"><i class="fa-solid fa-volume-xmark" aria-hidden="true"></i> Autoplays muted</span>
+      </div>
+    {% elsif media.type == 'video' %}
       <video
         class="portfolio-video"
         muted
@@ -20,10 +32,6 @@
       <span class="portfolio-motion-label"><i class="fa-solid fa-circle-play" aria-hidden="true"></i> Live preview</span>
     {% else %}
       <img src="{{ media.src | relative_url }}" alt="{{ media.alt }}" loading="lazy">
-      {% if media.play_url -%}
-        <span class="portfolio-play"><i class="fa-solid fa-play" aria-hidden="true"></i><span class="sr-only">Play demo</span></span>
-      {%- endif %}
     {% endif %}
-    {% if media.play_url %}</a>{% endif %}
   </div>
 {% endif %}

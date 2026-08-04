@@ -6,7 +6,13 @@
       </a>
     {% endif %}
     {% for link in links %}
-      <a class="portfolio-action" href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}">
+      <a
+        class="portfolio-action"
+        href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"
+        {% if link.embed %}
+          data-youtube-trigger="{{ link.youtube_id }}"
+        {% endif %}
+      >
         {% if link.icon %}<i class="{{ link.icon }}" aria-hidden="true"></i>{% endif %}
         {{ link.label }}
       </a>

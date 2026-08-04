@@ -19,7 +19,7 @@
       url: https://rzninvo.github.io/Lang-Loc/
       icon: fa-solid fa-arrow-up-right-from-square
     - label: Paper
-      url: https://arxiv.org/abs/2607.05077
+      url: /assets/portfolio/langloc/paper.pdf
       icon: ai ai-arxiv
     - label: Code
       url: https://github.com/rzninvo/Lang-Loc
@@ -60,8 +60,8 @@
   featured: true
   detail_url: /portfolio/smart-glasses/
   media:
-    type: video
-    src: assets/portfolio/smart-glasses/preview.mp4
+    type: youtube
+    youtube_id: N-JltTWf0Vw
     poster: assets/portfolio/smart-glasses/poster.jpg
     alt: "Mobile interface and reconstructed building used for landmark-based indoor navigation"
   technologies: [hloc, COLMAP, Habitat-Sim, PyTorch, LoRA, Open3D]
@@ -69,14 +69,16 @@
     - label: Demo
       url: https://youtu.be/N-JltTWf0Vw
       icon: fa-brands fa-youtube
+      embed: true
+      youtube_id: N-JltTWf0Vw
     - label: Code
       url: https://github.com/KlrShaK/Conversational_Navigation_for_Smart_Glasses
       icon: fa-brands fa-github
     - label: Poster
-      url: https://drive.google.com/file/d/1HJd8EX6o1TLpYBQCigks_ZbWDJrIcFaG/view?usp=drive_link
+      url: /assets/portfolio/smart-glasses/poster.pdf
       icon: fa-regular fa-image
     - label: Report
-      url: https://drive.google.com/file/d/1n1Nx1rwxgw72PEZq9z-ERaWggY-4oeSW/view?usp=sharing
+      url: /assets/portfolio/smart-glasses/report.pdf
       icon: fa-regular fa-file-lines
 
 - slug: rl-drone
@@ -89,17 +91,19 @@
   featured: true
   detail_url: /portfolio/rl-drone/
   media:
-    type: image
-    src: assets/portfolio/rl-drone/poster.jpg
+    type: youtube
+    youtube_id: H1y3LKRlMYc
+    poster: assets/portfolio/rl-drone/poster.jpg
     alt: "Real-world drone target-following demonstration"
-    play_url: https://www.youtube.com/watch?v=H1y3LKRlMYc
   technologies: [PPO, Python, C++, TensorFlow, ROS2, OpenCV]
   links:
     - label: Demo
       url: https://www.youtube.com/watch?v=H1y3LKRlMYc
       icon: fa-brands fa-youtube
+      embed: true
+      youtube_id: H1y3LKRlMYc
     - label: Report
-      url: https://drive.google.com/file/d/1pYvOz1_lOxPkm4MyaeNI5i7avQKixSJU/view?usp=sharing
+      url: /assets/portfolio/rl-drone/report.pdf
       icon: fa-regular fa-file-lines
 
 - slug: cloth-folding
@@ -138,8 +142,8 @@
   featured: true
   detail_url: /portfolio/actuator-iq/
   media:
-    type: video
-    src: assets/portfolio/actuator-iq/preview.mp4
+    type: youtube
+    youtube_id: _fuZAq_C73o
     poster: assets/portfolio/actuator-iq/poster.jpg
     alt: "ActuatorIQ interface showing an interactive building digital twin and HVAC diagnostics"
   technologies: [React, TypeScript, Three.js, Python, InfluxDB, Raspberry Pi]
@@ -147,6 +151,8 @@
     - label: Demo
       url: https://youtu.be/_fuZAq_C73o
       icon: fa-brands fa-youtube
+      embed: true
+      youtube_id: _fuZAq_C73o
     - label: Code
       url: https://github.com/KlrShaK/Belimo-ActuatorIQ
       icon: fa-brands fa-github
@@ -163,21 +169,20 @@
   timeline_order: 6
   detail_url: /portfolio/no-gps-drone/
   media:
-    type: image
-    src: assets/portfolio/no-gps-drone/poster.jpg
+    type: youtube
+    youtube_id: EyqHZkrB38Q
+    poster: assets/portfolio/no-gps-drone/poster.jpg
     alt: "Drone used during the No-GPS navigation research project in Switzerland"
-    play_url: https://www.youtube.com/watch?v=EyqHZkrB38Q
   technologies: [UNetFormer, PyTorch, Jetson Orin Nano, sensors, data acquisition]
   links:
     - label: Demo
       url: https://www.youtube.com/watch?v=EyqHZkrB38Q
       icon: fa-brands fa-youtube
+      embed: true
+      youtube_id: EyqHZkrB38Q
     - label: Blog
       url: /blog/2023/summer-23-intern/
       icon: fa-solid fa-book-open
-    - label: Media
-      url: https://drive.google.com/drive/folders/16mT-9xbNTa2VwfsxXxXko2sw1qJXU5Fp
-      icon: fa-regular fa-images
 
 - slug: defianz
   title: "Team Defianz Driverless Racing"
@@ -191,10 +196,14 @@
   timeline_order: 5
   detail_url: /portfolio/defianz/
   technologies: [ROS, PyTorch, YOLO, PointPillars, Gazebo, BayesRace]
+  media:
+    type: image
+    src: assets/portfolio/defianz/perception-system.jpeg
+    alt: "Team Defianz simulator showing LiDAR point clouds, fused track boundaries, and camera-based cone detections around the autonomous race car"
   links:
-    - label: Media
-      url: https://drive.google.com/drive/folders/1jaOyK1fHZpHoX54Q8uiEvAYqxPnmLSqJ?usp=sharing
-      icon: fa-regular fa-images
+    - label: NXP report
+      url: /assets/portfolio/nxp-smart-car/project-report.pdf
+      icon: fa-regular fa-file-lines
     - label: BayesRace
       url: https://github.com/KlrShaK/bayesrace
       icon: fa-brands fa-github
@@ -211,7 +220,7 @@
   supporting: true
   links:
     - label: Thesis
-      url: https://drive.google.com/file/d/1s0EknvvwHLOO8p6iLvjM1gyjZpthandd/view?usp=drive_link
+      url: /assets/portfolio/bachelor-thesis/thesis.pdf
       icon: fa-regular fa-file-lines
 
 - slug: dtu-vln
@@ -225,7 +234,7 @@
   supporting: true
   media:
     type: image
-    src: assets/img/leaderboard_vln.png
+    src: assets/portfolio/dtu-vln/leaderboard.png
     alt: "Vision-and-Language Navigation leaderboard showing the DTU team result"
   links:
     - label: Leaderboard
@@ -290,14 +299,25 @@
   categories: [robotics, computer-vision, embodied-ai]
   supporting: true
   media:
-    type: image
-    src: assets/portfolio/nxp-car/poster.jpg
+    type: youtube
+    youtube_id: U8uLd_OSrds
+    poster: assets/portfolio/nxp-smart-car/poster.jpg
     alt: "NXP autonomous smart-car demonstration"
-    play_url: https://youtu.be/U8uLd_OSrds?si=pycOz_iJBJtV2okE
   links:
     - label: Demo
       url: https://youtu.be/U8uLd_OSrds?si=pycOz_iJBJtV2okE
       icon: fa-brands fa-youtube
+      embed: true
+      youtube_id: U8uLd_OSrds
+    - label: Runner-up certificate
+      url: /assets/portfolio/nxp-smart-car/runner-up-certificate.pdf
+      icon: fa-solid fa-award
+    - label: Best Car certificate
+      url: /assets/portfolio/nxp-smart-car/best-car-model-certificate.pdf
+      icon: fa-solid fa-award
+    - label: Project report
+      url: /assets/portfolio/nxp-smart-car/project-report.pdf
+      icon: fa-regular fa-file-lines
 
 - slug: monkee
   title: "Bimanual Climbing Robot"

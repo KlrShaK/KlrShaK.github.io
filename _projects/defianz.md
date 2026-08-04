@@ -14,6 +14,8 @@ Over three years at Team Defianz, I moved from autonomous-systems development in
 
 I worked on high-speed cone detection, localization, and classification; synthetic-data generation; LiDAR-based 3D detection with PointPillars; camera–LiDAR calibration; and BayesRace trajectory optimization. System-in-the-loop and hardware-in-the-loop testing connected those algorithms to the physical vehicle.
 
+The simulator view above brings the combined perception system together: LiDAR point clouds and fused track geometry sit alongside camera-based cone detections, making the complete sensor-fusion pipeline visible in one debugging workspace.
+
 ## Leadership and safety
 
 As Team Manager and Autonomous Systems Officer, I supervised technical delivery, certified high-voltage and autonomous-system safety, and secured more than **$5,000 in title sponsorship**, including support from NXP Semiconductors.
