@@ -2,13 +2,13 @@
 layout: post
 title: Summer Of <s>'69</s> ’23
 date: 2023-08-29 21:01:00
-description:  Drone Dreams and Swiss Cheese Schemes - My Alpine Internship Adventures
+description: Drone Dreams and Swiss Cheese Schemes - My Alpine Internship Adventures
 tags: intern-diaries travel work
 categories: sample-posts
 thumbnail: assets/img/intern_thumbnail.jpg
 ---
-## Drone Dreams and Swiss Cheese Schemes - My Alpine Internship Adventures
 
+## Drone Dreams and Swiss Cheese Schemes - My Alpine Internship Adventures
 
 The summer of 2023 marked a pivotal moment in my life as I embarked on an extraordinary journey to Switzerland. My destination: the Computer Perception and Vision Laboratory (CPVR) at Bern University of Applied Sciences, where I would spend my next three transformative months working on the project "No GPS Drone Project" under the guidance of Prof. Marcus Hudritsch. This project aimed to revolutionize drone navigation by developing a purely vision-based system capable of operating in GPS-denied areas and harsh weather conditions.
 
@@ -42,8 +42,8 @@ In conclusion, my Swiss internship experience in 2023 was a transformative journ
     The tasty pizza party after the hike. :yum: and some views during the hike, 
 </div>
 
-
 **Signing off...**
 
 ##### Shaurya Kishore Panwar
+
 ##### ThinkSwiss Research Fellow 2023

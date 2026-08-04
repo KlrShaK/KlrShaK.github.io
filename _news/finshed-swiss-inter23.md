@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Released a [blog post](https://klrshak.github.io/blog/2023/summer-23-intern/) on my experiences in Switzerland. 
+Released a [blog post](https://klrshak.github.io/blog/2023/summer-23-intern/) on my experiences in Switzerland.

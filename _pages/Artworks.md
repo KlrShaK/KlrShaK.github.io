@@ -8,6 +8,7 @@ nav_order: 6
 display_categories: [art, paintings, sketches]
 horizontal: false
 ---
+
 <!--  ❱❱  Artworks Gallery  ❰❰  -->
 <div class="container my-4">
 
@@ -34,6 +35,7 @@ horizontal: false
          caption="<strong>Delhi Tech. Uni.</strong> · Watercolor"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
+
   </div>
 
   <!-- Row 2 -->
@@ -58,6 +60,7 @@ horizontal: false
          caption="<strong>Untitled</strong> · Oil on canvas"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
+
   </div>
 
   <!-- Row 3 -->
@@ -82,6 +85,7 @@ horizontal: false
          caption="<strong>Alpine Study</strong> · Oil on Canvas"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
+
   </div>
 
   <!-- Row 4 -->
@@ -106,6 +110,7 @@ horizontal: false
          caption="<strong>Emma Watson - Portrait Study</strong> · Graphite on Paper"
          class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
+
   </div>
 
   <!-- Row 5 -->
