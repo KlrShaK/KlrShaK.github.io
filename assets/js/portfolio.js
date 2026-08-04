@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const videos = Array.from(document.querySelectorAll(".portfolio-video"));
   const youtubeEmbeds = Array.from(document.querySelectorAll(".portfolio-youtube"));
+  const mediaItems = videos.concat(youtubeEmbeds);
+  let activeMedia = null;
+  let mediaUpdateFrame = null;
 
   const sendYouTubeCommand = (embed, command) => {
     const iframe = embed.querySelector("iframe");
@@ -15,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (embed.dataset.loaded === "true") {
       sendYouTubeCommand(embed, muted ? "mute" : "unMute");
-      if (autoplay) sendYouTubeCommand(embed, "playVideo");
+      sendYouTubeCommand(embed, autoplay ? "playVideo" : "pauseVideo");
       return;
     }
 
@@ -51,49 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
     embed.dataset.loaded = "true";
   };
 
-  youtubeEmbeds.forEach((embed) => {
-    const loadButton = embed.querySelector(".portfolio-youtube-load");
-    if (loadButton) {
-      loadButton.addEventListener("click", () => loadYouTube(embed, { autoplay: true, muted: false }));
-    }
-  });
-
-  if ("IntersectionObserver" in window) {
-    const youtubeObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const embed = entry.target;
-          if (entry.isIntersecting && !embed.closest("[hidden]") && !reducedMotion.matches) {
-            loadYouTube(embed, { autoplay: true, muted: true });
-          } else if (embed.dataset.loaded === "true") {
-            embed.dataset.shouldPlay = "false";
-            sendYouTubeCommand(embed, "pauseVideo");
-          }
-        });
-      },
-      { rootMargin: "120px 0px", threshold: 0.35 }
-    );
-    youtubeEmbeds.forEach((embed) => youtubeObserver.observe(embed));
-  } else if (!reducedMotion.matches) {
-    youtubeEmbeds.forEach((embed) => loadYouTube(embed, { autoplay: true, muted: true }));
-  }
-
-  document.querySelectorAll("[data-youtube-trigger]").forEach((trigger) => {
-    trigger.addEventListener("click", (event) => {
-      const videoId = trigger.dataset.youtubeTrigger;
-      const card = trigger.closest(".portfolio-card, .portfolio-detail");
-      const localContainer = card ? card.querySelector(".portfolio-youtube") : null;
-      const embed = localContainer || youtubeEmbeds.find((candidate) => candidate.dataset.youtubeId === videoId);
-      if (!embed) return;
-
-      event.preventDefault();
-      loadYouTube(embed, { autoplay: true, muted: false });
-      embed.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "center" });
-    });
-  });
-
   const loadVideo = (video) => {
-    if (reducedMotion.matches || video.dataset.loaded === "true") return;
+    if (video.dataset.loaded === "true") return;
     const source = video.querySelector("source[data-src]");
     if (!source) return;
     source.src = source.dataset.src;
@@ -107,70 +69,160 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!toggle) return;
     toggle.setAttribute("aria-label", playing ? "Pause video preview" : "Play video preview");
     const icon = toggle.querySelector("i");
+    if (!icon) return;
     icon.classList.toggle("fa-pause", playing);
     icon.classList.toggle("fa-play", !playing);
   };
 
+  const pauseMedia = (media) => {
+    media.dataset.userActivated = "false";
+
+    if (media.classList.contains("portfolio-video")) {
+      media.pause();
+      setVideoState(media, false);
+      return;
+    }
+
+    media.dataset.shouldPlay = "false";
+    sendYouTubeCommand(media, "pauseVideo");
+  };
+
+  const playMedia = (media, muted = true) => {
+    if (media.classList.contains("portfolio-video")) {
+      loadVideo(media);
+      media
+        .play()
+        .then(() => setVideoState(media, activeMedia === media && !media.paused))
+        .catch(() => setVideoState(media, false));
+      return;
+    }
+
+    loadYouTube(media, { autoplay: true, muted });
+  };
+
+  const activateMedia = (media, muted = true) => {
+    mediaItems.forEach((candidate) => {
+      if (candidate === media) {
+        playMedia(candidate, muted);
+      } else {
+        pauseMedia(candidate);
+      }
+    });
+    activeMedia = media;
+  };
+
+  const isMediaVisible = (media) => {
+    if (media.closest("[hidden]")) return false;
+    if (media.classList.contains("portfolio-video") && media.dataset.userPaused === "true") return false;
+
+    const rect = media.getBoundingClientRect();
+    return rect.width > 0 && rect.height > 0 && rect.bottom > 0 && rect.top < window.innerHeight && rect.right > 0 && rect.left < window.innerWidth;
+  };
+
+  const distanceFromViewportCenter = (media) => {
+    const rect = media.getBoundingClientRect();
+    const horizontalDistance = rect.left + rect.width / 2 - window.innerWidth / 2;
+    const verticalDistance = rect.top + rect.height / 2 - window.innerHeight / 2;
+    return Math.hypot(horizontalDistance, verticalDistance);
+  };
+
+  const updateActiveMedia = () => {
+    mediaUpdateFrame = null;
+
+    if (document.hidden) {
+      activateMedia(null);
+      return;
+    }
+
+    if (reducedMotion.matches) {
+      if (!activeMedia || activeMedia.dataset.userActivated !== "true") activateMedia(null);
+      return;
+    }
+
+    const nearestMedia = mediaItems
+      .filter(isMediaVisible)
+      .sort((first, second) => distanceFromViewportCenter(first) - distanceFromViewportCenter(second))[0];
+
+    if (nearestMedia === activeMedia) return;
+    const muted = !nearestMedia || nearestMedia.dataset.userActivated !== "true";
+    activateMedia(nearestMedia || null, muted);
+  };
+
+  const scheduleMediaUpdate = () => {
+    if (mediaUpdateFrame !== null) return;
+    mediaUpdateFrame = window.requestAnimationFrame(updateActiveMedia);
+  };
+
+  youtubeEmbeds.forEach((embed) => {
+    const loadButton = embed.querySelector(".portfolio-youtube-load");
+    if (!loadButton) return;
+    loadButton.addEventListener("click", () => {
+      embed.dataset.userActivated = "true";
+      activateMedia(embed, false);
+      embed.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "center" });
+    });
+  });
+
+  document.querySelectorAll("[data-youtube-trigger]").forEach((trigger) => {
+    trigger.addEventListener("click", (event) => {
+      const videoId = trigger.dataset.youtubeTrigger;
+      const card = trigger.closest(".portfolio-card, .portfolio-detail");
+      const localContainer = card ? card.querySelector(".portfolio-youtube") : null;
+      const embed = localContainer || youtubeEmbeds.find((candidate) => candidate.dataset.youtubeId === videoId);
+      if (!embed) return;
+
+      event.preventDefault();
+      embed.dataset.userActivated = "true";
+      activateMedia(embed, false);
+      embed.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "center" });
+    });
+  });
+
   videos.forEach((video) => {
+    setVideoState(video, false);
     const toggle = video.parentElement.querySelector(".portfolio-video-toggle");
     if (!toggle) return;
     toggle.addEventListener("click", () => {
       if (video.paused) {
         video.dataset.userPaused = "false";
-        loadVideo(video);
-        video
-          .play()
-          .then(() => setVideoState(video, true))
-          .catch(() => {});
+        video.dataset.userActivated = "true";
+        activateMedia(video);
+        video.scrollIntoView({ behavior: reducedMotion.matches ? "auto" : "smooth", block: "center" });
       } else {
         video.dataset.userPaused = "true";
-        video.pause();
-        setVideoState(video, false);
+        pauseMedia(video);
+        activeMedia = null;
+        scheduleMediaUpdate();
       }
     });
   });
 
-  if ("IntersectionObserver" in window) {
-    const videoObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const video = entry.target;
-          if (entry.isIntersecting && !video.closest("[hidden]") && video.dataset.userPaused !== "true") {
-            loadVideo(video);
-            video
-              .play()
-              .then(() => setVideoState(video, true))
-              .catch(() => {});
-          } else {
-            video.pause();
-            setVideoState(video, false);
-          }
-        });
-      },
-      { rootMargin: "180px 0px", threshold: 0.15 }
-    );
-    videos.forEach((video) => videoObserver.observe(video));
-  } else if (!reducedMotion.matches) {
-    videos.forEach((video) => {
-      loadVideo(video);
-      video
-        .play()
-        .then(() => setVideoState(video, true))
-        .catch(() => {});
+  window.addEventListener("message", (event) => {
+    const embed = youtubeEmbeds.find((candidate) => {
+      const iframe = candidate.querySelector("iframe");
+      return iframe && iframe.contentWindow === event.source;
     });
-  }
+    if (!embed || embed === activeMedia) return;
 
-  reducedMotion.addEventListener("change", (event) => {
-    if (event.matches) {
-      videos.forEach((video) => {
-        video.pause();
-        setVideoState(video, false);
-      });
-      youtubeEmbeds.forEach((embed) => {
-        embed.dataset.shouldPlay = "false";
-        sendYouTubeCommand(embed, "pauseVideo");
-      });
+    let message = event.data;
+    if (typeof message === "string") {
+      try {
+        message = JSON.parse(message);
+      } catch (_error) {
+        return;
+      }
     }
+
+    if (message && message.info && message.info.playerState === 1) pauseMedia(embed);
+  });
+
+  window.addEventListener("scroll", scheduleMediaUpdate, { passive: true });
+  window.addEventListener("resize", scheduleMediaUpdate);
+  document.addEventListener("visibilitychange", scheduleMediaUpdate);
+
+  reducedMotion.addEventListener("change", () => {
+    activeMedia = null;
+    scheduleMediaUpdate();
   });
 
   const filterButtons = Array.from(document.querySelectorAll(".portfolio-filter"));
@@ -193,20 +245,16 @@ document.addEventListener("DOMContentLoaded", () => {
         item.hidden = !visible;
         if (visible) visibleCount += 1;
 
-        const video = item.querySelector(".portfolio-video");
-        if (video && !visible) {
-          video.pause();
-          setVideoState(video, false);
-        }
-
-        const youtube = item.querySelector(".portfolio-youtube");
-        if (youtube && !visible) {
-          youtube.dataset.shouldPlay = "false";
-          sendYouTubeCommand(youtube, "pauseVideo");
+        if (!visible) {
+          const media = item.querySelector(".portfolio-video, .portfolio-youtube");
+          if (media) pauseMedia(media);
         }
       });
 
       if (emptyMessage) emptyMessage.hidden = visibleCount !== 0;
+      scheduleMediaUpdate();
     });
   });
+
+  scheduleMediaUpdate();
 });
