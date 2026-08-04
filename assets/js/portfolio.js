@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const sendYouTubeCommand = (embed, command) => {
     const iframe = embed.querySelector("iframe");
-    if (!iframe?.contentWindow) return;
+    if (!iframe || !iframe.contentWindow) return;
     iframe.contentWindow.postMessage(JSON.stringify({ event: "command", func: command, args: [] }), "*");
   };
 
@@ -53,7 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   youtubeEmbeds.forEach((embed) => {
     const loadButton = embed.querySelector(".portfolio-youtube-load");
-    loadButton?.addEventListener("click", () => loadYouTube(embed, { autoplay: true, muted: false }));
+    if (loadButton) {
+      loadButton.addEventListener("click", () => loadYouTube(embed, { autoplay: true, muted: false }));
+    }
   });
 
   if ("IntersectionObserver" in window) {
@@ -79,7 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-youtube-trigger]").forEach((trigger) => {
     trigger.addEventListener("click", (event) => {
       const videoId = trigger.dataset.youtubeTrigger;
-      const localContainer = trigger.closest(".portfolio-card, .portfolio-detail")?.querySelector(".portfolio-youtube");
+      const card = trigger.closest(".portfolio-card, .portfolio-detail");
+      const localContainer = card ? card.querySelector(".portfolio-youtube") : null;
       const embed = localContainer || youtubeEmbeds.find((candidate) => candidate.dataset.youtubeId === videoId);
       if (!embed) return;
 
