@@ -116,17 +116,10 @@
   featured: true
   detail_url: /portfolio/cloth-folding/
   media:
-    type: gallery
-    items:
-      - src: assets/portfolio/cloth-folding/rollouts/approach.gif
-        label: "Approach"
-        alt: "SO-101 arm approaching the blue cloth during a rollout"
-      - src: assets/portfolio/cloth-folding/rollouts/grasp.gif
-        label: "Grasp"
-        alt: "SO-101 arm grasping the blue cloth during a rollout"
-      - src: assets/portfolio/cloth-folding/rollouts/fold.gif
-        label: "Fold"
-        alt: "SO-101 arm folding the blue cloth during a rollout"
+    type: video
+    src: assets/portfolio/cloth-folding/preview.mp4
+    poster: assets/portfolio/cloth-folding/poster.jpg
+    alt: "Complete SO-101 multiple-rollout cloth-folding sequence"
   technologies: [SmolVLA, LeRobot, PyTorch, SO-101, WebRTC]
   links:
     - label: Code
