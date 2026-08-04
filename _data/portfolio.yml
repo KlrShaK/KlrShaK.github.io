@@ -116,10 +116,17 @@
   featured: true
   detail_url: /portfolio/cloth-folding/
   media:
-    type: video
-    src: assets/portfolio/cloth-folding/preview.mp4
-    poster: assets/portfolio/cloth-folding/poster.jpg
-    alt: "SO-101 robot arm autonomously folding a blue cloth"
+    type: gallery
+    items:
+      - src: assets/portfolio/cloth-folding/rollouts/approach.gif
+        label: "Approach"
+        alt: "SO-101 arm approaching the blue cloth during a rollout"
+      - src: assets/portfolio/cloth-folding/rollouts/grasp.gif
+        label: "Grasp"
+        alt: "SO-101 arm grasping the blue cloth during a rollout"
+      - src: assets/portfolio/cloth-folding/rollouts/fold.gif
+        label: "Fold"
+        alt: "SO-101 arm folding the blue cloth during a rollout"
   technologies: [SmolVLA, LeRobot, PyTorch, SO-101, WebRTC]
   links:
     - label: Code
@@ -131,6 +138,9 @@
     - label: Policy
       url: https://huggingface.co/klrshak/smolvla_HQ_two_cam
       icon: fa-solid fa-cube
+    - label: Rollout video
+      url: /assets/portfolio/cloth-folding/preview.mp4
+      icon: fa-solid fa-film
 
 - slug: actuator-iq
   title: "ActuatorIQ"
@@ -217,7 +227,12 @@
   context: "Bachelor’s thesis · Delhi Technological University"
   summary: "Fine-grained semantic grounding for aerial vision-and-language navigation, connecting visual-language pre-training with embodied navigation."
   categories: [research, embodied-ai, computer-vision]
-  supporting: true
+  featured: true
+  media:
+    type: image
+    src: assets/portfolio/bachelor-thesis/architecture-diagram.png
+    alt: "Architecture diagram for the aerial vision-and-language navigation pipeline"
+    fit: contain
   links:
     - label: Thesis
       url: /assets/portfolio/bachelor-thesis/thesis.pdf
@@ -297,7 +312,7 @@
   context: "NXP AIM India · 3rd nationally · Best Car Model"
   summary: "An imitation-learning navigation stack with ROS2, a compact CNN, and YOLOv4-Tiny trained from a small custom-augmented dataset."
   categories: [robotics, computer-vision, embodied-ai]
-  supporting: true
+  featured: true
   media:
     type: youtube
     youtube_id: U8uLd_OSrds

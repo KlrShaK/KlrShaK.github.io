@@ -1,7 +1,18 @@
 {% assign media = include.media %}
 {% if media %}
-  <div class="portfolio-media">
-    {% if media.type == 'youtube' %}
+  <div class="portfolio-media{% if media.fit == 'contain' %} portfolio-media-contain{% endif %}{% if media.type == 'gallery' %} portfolio-media-gallery{% endif %}">
+    {% if media.type == 'gallery' %}
+      <div class="portfolio-rollout-grid">
+        {% for item in media.items %}
+          <figure class="portfolio-rollout">
+            <img src="{{ item.src | relative_url }}" alt="{{ item.alt }}" loading="lazy">
+            {% if item.label %}
+              <figcaption>{{ item.label }}</figcaption>
+            {% endif %}
+          </figure>
+        {% endfor %}
+      </div>
+    {% elsif media.type == 'youtube' %}
       <div
         class="portfolio-youtube"
         data-youtube-id="{{ media.youtube_id }}"
