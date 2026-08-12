@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const youtubeEmbeds = Array.from(document.querySelectorAll(".portfolio-youtube"));
   const mediaItems = videos.concat(youtubeEmbeds);
   const mediaDialog = document.querySelector(".portfolio-media-dialog");
-  const dialogVideo = mediaDialog?.querySelector(".portfolio-media-dialog-video");
-  const dialogTitle = mediaDialog?.querySelector("#portfolio-media-dialog-title");
-  const dialogClose = mediaDialog?.querySelector(".portfolio-media-dialog-close");
+  const dialogVideo = mediaDialog ? mediaDialog.querySelector(".portfolio-media-dialog-video") : null;
+  const dialogTitle = mediaDialog ? mediaDialog.querySelector("#portfolio-media-dialog-title") : null;
+  const dialogClose = mediaDialog ? mediaDialog.querySelector(".portfolio-media-dialog-close") : null;
   let activeMedia = null;
   let mediaUpdateFrame = null;
   let dialogTrigger = null;
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const updateActiveMedia = () => {
     mediaUpdateFrame = null;
 
-    if (document.hidden || mediaDialog?.open) {
+    if (document.hidden || (mediaDialog && mediaDialog.open)) {
       activateMedia(null);
       return;
     }
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const closeMediaDialog = () => {
-    if (!mediaDialog?.open) return;
+    if (!mediaDialog || !mediaDialog.open) return;
     mediaDialog.close();
   };
 
@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
     dialogVideo.removeAttribute("poster");
     dialogVideo.load();
     document.body.classList.remove("portfolio-dialog-open");
-    dialogTrigger?.focus();
+    if (dialogTrigger) dialogTrigger.focus();
     dialogTrigger = null;
     scheduleMediaUpdate();
   };
@@ -241,11 +241,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  dialogClose?.addEventListener("click", closeMediaDialog);
-  mediaDialog?.addEventListener("click", (event) => {
-    if (event.target === mediaDialog) closeMediaDialog();
-  });
-  mediaDialog?.addEventListener("close", resetMediaDialog);
+  if (dialogClose) dialogClose.addEventListener("click", closeMediaDialog);
+  if (mediaDialog) {
+    mediaDialog.addEventListener("click", (event) => {
+      if (event.target === mediaDialog) closeMediaDialog();
+    });
+    mediaDialog.addEventListener("close", resetMediaDialog);
+  }
 
   window.addEventListener("message", (event) => {
     const embed = youtubeEmbeds.find((candidate) => {
