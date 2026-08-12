@@ -75,6 +75,7 @@
     {% include scripts/search.liquid %}
     <script src="{{ '/assets/js/shortcut-key.js' | relative_url }}"></script>
     {% if page.portfolio or page.layout == 'portfolio' %}
+      {% include portfolio/media-dialog.liquid %}
       <script src="{{ '/assets/js/portfolio.js' | relative_url | bust_file_cache }}"></script>
     {% endif %}
   </body>

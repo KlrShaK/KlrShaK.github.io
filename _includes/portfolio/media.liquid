@@ -5,7 +5,7 @@
       <div class="portfolio-rollout-grid">
         {% for item in media.items %}
           <figure class="portfolio-rollout">
-            <img src="{{ item.src | relative_url }}" alt="{{ item.alt }}" loading="lazy">
+            <img src="{{ item.src | relative_url }}" alt="{{ item.alt }}" loading="lazy" data-zoomable>
             {% if item.label %}
               <figcaption>{{ item.label }}</figcaption>
             {% endif %}
@@ -40,8 +40,21 @@
       <button class="portfolio-video-toggle" type="button" aria-label="Pause video preview">
         <i class="fa-solid fa-pause" aria-hidden="true"></i>
       </button>
+      <button
+        class="portfolio-media-expand"
+        type="button"
+        data-video-expand="{{ media.src | relative_url }}"
+        data-video-poster="{{ media.poster | relative_url }}"
+        data-media-title="{{ include.title | escape }}"
+        aria-label="Expand {{ include.title }} video"
+      >
+        <i class="fa-solid fa-expand" aria-hidden="true"></i><span>Expand</span>
+      </button>
     {% else %}
-      <img src="{{ media.src | relative_url }}" alt="{{ media.alt }}" loading="lazy">
+      <img src="{{ media.src | relative_url }}" alt="{{ media.alt }}" loading="lazy" data-zoomable>
+      <button class="portfolio-media-expand" type="button" data-image-expand aria-label="Enlarge {{ include.title }} image">
+        <i class="fa-solid fa-expand" aria-hidden="true"></i><span>Enlarge</span>
+      </button>
     {% endif %}
   </div>
 {% endif %}
