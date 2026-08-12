@@ -1,14 +1,18 @@
-{% if detail_url or links.size > 0 %}
-  <div class="portfolio-actions{% if compact %} portfolio-actions-compact{% endif %}">
-    {% if detail_url %}
-      <a class="portfolio-action portfolio-action-primary" href="{{ detail_url | relative_url }}">
-        Explore <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+{% assign portfolio_links = include.links %}
+{% assign portfolio_detail_url = include.detail_url %}
+{% assign portfolio_compact = include.compact %}
+{% if portfolio_detail_url or portfolio_links.size > 0 %}
+  <div class="portfolio-actions{% if portfolio_compact %} portfolio-actions-compact{% endif %}">
+    {% if portfolio_detail_url %}
+      <a class="portfolio-action portfolio-action-primary" href="{{ portfolio_detail_url | relative_url }}">
+        View project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
       </a>
     {% endif %}
-    {% for link in links %}
+    {% for link in portfolio_links %}
       <a
         class="portfolio-action"
         href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"
+        aria-label="{% if link.embed %}Play{% else %}{{ link.label }} for{% endif %} {{ include.title | default: page.title | escape }}{% if link.url contains '://' and link.embed != true %} (opens in a new tab){% endif %}"
         {% if link.embed %}
           data-youtube-trigger="{{ link.youtube_id }}"
         {% endif %}

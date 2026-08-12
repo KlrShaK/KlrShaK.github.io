@@ -8,7 +8,7 @@ layout: default
     <p class="portfolio-kicker">{{ item.context }} · {{ item.period }}</p>
     <h1>{{ item.title }}</h1>
     <p class="portfolio-detail-lede">{{ item.summary }}</p>
-    {% include portfolio/actions.liquid links=item.links %}
+    {% include portfolio/actions.liquid links=item.links title=item.title %}
   </header>
   {% if item.media %}
     <div class="portfolio-detail-media">

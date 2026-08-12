@@ -61,7 +61,7 @@ portfolio: true
             <p class="portfolio-eyebrow">{{ item.context }}</p>
             <h3>{{ item.title }}</h3>
             <p>{{ item.summary }}</p>
-            {% include portfolio/actions.liquid links=item.links detail_url=item.detail_url compact=true %}
+            {% include portfolio/actions.liquid links=item.links detail_url=item.detail_url title=item.title compact=true %}
           </div>
         </li>
       {% endfor %}
