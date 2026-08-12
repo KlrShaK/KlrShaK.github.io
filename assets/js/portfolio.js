@@ -3,8 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const videos = Array.from(document.querySelectorAll(".portfolio-video"));
   const youtubeEmbeds = Array.from(document.querySelectorAll(".portfolio-youtube"));
   const mediaItems = videos.concat(youtubeEmbeds);
+  const mediaDialog = document.querySelector(".portfolio-media-dialog");
+  const dialogVideo = mediaDialog?.querySelector(".portfolio-media-dialog-video");
+  const dialogTitle = mediaDialog?.querySelector("#portfolio-media-dialog-title");
+  const dialogClose = mediaDialog?.querySelector(".portfolio-media-dialog-close");
   let activeMedia = null;
   let mediaUpdateFrame = null;
+  let dialogTrigger = null;
 
   const sendYouTubeCommand = (embed, command) => {
     const iframe = embed.querySelector("iframe");
@@ -129,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const updateActiveMedia = () => {
     mediaUpdateFrame = null;
 
-    if (document.hidden) {
+    if (document.hidden || mediaDialog?.open) {
       activateMedia(null);
       return;
     }
@@ -197,6 +202,51 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  document.querySelectorAll("[data-image-expand]").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const image = trigger.parentElement.querySelector("img[data-zoomable]");
+      if (image) image.click();
+    });
+  });
+
+  const closeMediaDialog = () => {
+    if (!mediaDialog?.open) return;
+    mediaDialog.close();
+  };
+
+  const resetMediaDialog = () => {
+    if (!dialogVideo) return;
+    dialogVideo.pause();
+    dialogVideo.removeAttribute("src");
+    dialogVideo.removeAttribute("poster");
+    dialogVideo.load();
+    document.body.classList.remove("portfolio-dialog-open");
+    dialogTrigger?.focus();
+    dialogTrigger = null;
+    scheduleMediaUpdate();
+  };
+
+  document.querySelectorAll("[data-video-expand]").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      if (!mediaDialog || !dialogVideo || !dialogTitle) return;
+
+      activateMedia(null);
+      dialogTrigger = trigger;
+      dialogTitle.textContent = trigger.dataset.mediaTitle || "Project video";
+      dialogVideo.src = trigger.dataset.videoExpand;
+      if (trigger.dataset.videoPoster) dialogVideo.poster = trigger.dataset.videoPoster;
+      document.body.classList.add("portfolio-dialog-open");
+      mediaDialog.showModal();
+      dialogVideo.play().catch(() => undefined);
+    });
+  });
+
+  dialogClose?.addEventListener("click", closeMediaDialog);
+  mediaDialog?.addEventListener("click", (event) => {
+    if (event.target === mediaDialog) closeMediaDialog();
+  });
+  mediaDialog?.addEventListener("close", resetMediaDialog);
+
   window.addEventListener("message", (event) => {
     const embed = youtubeEmbeds.find((candidate) => {
       const iframe = candidate.querySelector("iframe");
@@ -246,8 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (visible) visibleCount += 1;
 
         if (!visible) {
-          const media = item.querySelector(".portfolio-video, .portfolio-youtube");
-          if (media) pauseMedia(media);
+          item.querySelectorAll(".portfolio-video, .portfolio-youtube").forEach(pauseMedia);
         }
       });
 
