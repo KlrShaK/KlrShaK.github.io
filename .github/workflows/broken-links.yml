@@ -50,4 +50,4 @@ jobs:
           fail: true
           # removed md files that include liquid tags
           # These providers reject automated requests; keep the rest of the scan strict.
-          args: --root-dir "$(pwd)" --user-agent 'curl/7.54' --exclude 'https://scholar\.google\.com/citations\?user=JRr4wjoAAAAJ' --exclude 'https://eu\.winsornewton\.com/collections/beginner-watercolour-sets/products/cotman-watercolour-beginners-bundle' --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _posts/2018-12-22-distill.md --verbose --no-progress './**/*.md' './**/*.html'
+          args: --root-dir "$(pwd)" --user-agent 'curl/7.54' --exclude 'https://scholar\.google\.com/citations\?user=JRr4wjoAAAAJ' --exclude 'https://eu\.winsornewton\.com/collections/beginner-watercolour-sets/products/cotman-watercolour-beginners-bundle' --exclude 'https://opencv\.org/' --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _posts/2018-12-22-distill.md --verbose --no-progress './**/*.md' './**/*.html'
