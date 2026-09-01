@@ -83,7 +83,7 @@ horizontal: false
       {% include figure.liquid
          path="assets/img/art/7.jpg"
          caption="<strong>Alpine Study</strong> · Oil on Canvas"
-         class="img-fluid rounded z-depth-1" zoomable=true %}
+         class="img-fluid rounded z-depth-1" zoomable=true skip_responsive=true %}
     </div>
 
   </div>
