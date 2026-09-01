@@ -626,6 +626,14 @@ a.portfolio-action {
       text-decoration: underline;
     }
   }
+
+  a.portfolio-action-primary {
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+    color: var(--global-hover-text-color);
+    white-space: nowrap;
+    border: 1px solid var(--portfolio-accent);
+  }
 }
 
 .portfolio-journey {
